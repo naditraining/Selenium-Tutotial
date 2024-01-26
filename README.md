@@ -2,9 +2,43 @@
 ## Introduction to automation testing
 ### Why Selenium 
 ### Sample Selenium program
+
+ 
+      package org.example;
+      
+      import org.openqa.selenium.By;
+      import org.openqa.selenium.WebDriver;
+      import org.openqa.selenium.WebElement;
+      import org.openqa.selenium.chrome.ChromeDriver;
+      
+      import java.time.Duration;
+      
+      public class SampleSeleniumScript {
+          public static void main(String[] args) {
+              WebDriver driver = new ChromeDriver();
+      
+              driver.get("https://www.selenium.dev/selenium/web/web-form.html");
+      
+              driver.getTitle();
+      
+              driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+      
+              WebElement textBox = driver.findElement(By.name("my-text"));
+              WebElement submitButton = driver.findElement(By.cssSelector("button"));
+      
+              textBox.sendKeys("Selenium");
+              submitButton.click();
+      
+              WebElement message = driver.findElement(By.id("message"));
+              message.getText();
+      
+              driver.quit();
+          }
+      }
+
 ### Pre requisites for selenium
-1: Language - Install Java Development Kit (JDK)
-2: IDE (Editor) - Install IntelliJ IDEA
+    1: Language - Install Java Development Kit (JDK)
+    2: IDE (Editor) - Install IntelliJ IDEA
 
 ## JAVA, Installation, Setting environment variable
 ### Java versions
@@ -85,20 +119,20 @@ source ~/.zshrc
 8. Click "OK" to close each of the windows.
 
 
-##### Update Path Variable
-1. In the same "Environment Variables" window, find the "Path" variable under the "System variables" section and click "Edit."
-2. In the "Edit Environment Variable" window, click "New" and add the following two entries:
-%JAVA_HOME%\bin
-%JAVA_HOME%\jre\bin
-3. This allows your system to find the Java executables.
-4. Click "OK" to close each of the windows.
-
-
-##### Verify Setup
-1. Open a new command prompt (cmd) or PowerShell window.
-2. Type the following commands to check if Java is installed and configured correctly:
-
-java -version
+  ##### Update Path Variable
+  1. In the same "Environment Variables" window, find the "Path" variable under the "System variables" section and click "Edit."
+  2. In the "Edit Environment Variable" window, click "New" and add the following two entries:
+  %JAVA_HOME%\bin
+  %JAVA_HOME%\jre\bin
+  3. This allows your system to find the Java executables.
+  4. Click "OK" to close each of the windows.
+  
+  
+  ##### Verify Setup
+  1. Open a new command prompt (cmd) or PowerShell window.
+  2. Type the following commands to check if Java is installed and configured correctly:
+  
+  java -version
 
 
 ### JVM, JRE, JDK
