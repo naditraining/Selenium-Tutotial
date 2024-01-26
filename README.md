@@ -3,6 +3,9 @@
 ### Why Selenium 
 ### Sample Selenium program
 ### Pre requisites for selenium
+1: Language - Install Java Development Kit (JDK)
+2: IDE (Editor) - Install IntelliJ IDEA
+
 ## JAVA, Installation, Setting environment variable
 ### Java versions
 1. **Java 1.0 (January 23, 1996):** The initial version of Java introduced by Sun Microsystems.
@@ -43,13 +46,56 @@
 
 ### JAVA installation
 
+Check if Java is Installed:
+
+java -version
+
+Install JDK 
+
 https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
 
 things to consider before downloading
 1. OS (windows, linux)
-2. Processor architecture (x64, ARM, 
+2. Processor architecture (x64, ARM)
+
+Follow steps 
+### Set JAVA_HOME Environment Variable
+The steps vary for windows and Mac OS 
+#### MAC OS 
+1. Open Terminal.
+2. Edit the shell profile file (e.g., ~/.bash_profile, ~/.zshrc, or ~/.bashrc) using a text editor like nano or vi. For example:
+nano ~/.zshrc
+3. Add the following line at the end to set the JAVA_HOME environment variable:
+export JAVA_HOME=/path/to/your/jdk
+note - Replace /path/to/your/jdk with the actual path to your JDK installation directory.
+4. Save the file and exit the text editor.
+5. Run the following command to apply the changes:
+source ~/.zshrc
+
+#### Windows
+After installing the JDK, find the installation directory. By default, it is something like C:\Program Files\Java\jdk1.x.x
+Right-click on the Windows icon (Start menu) and select "System."
+Click on "Advanced system settings" on the left.
+In the System Properties window, click the "Environment Variables..." button.
+Under the "System variables" section, click "New."
+Set the variable name as JAVA_HOME.
+Set the variable value to the path of your JDK installation directory (e.g., C:\Program Files\Java\jdk1.x.x).
+Click "OK" to close each of the windows.
+
+##### Update Path Variable
+In the same "Environment Variables" window, find the "Path" variable under the "System variables" section and click "Edit."
+In the "Edit Environment Variable" window, click "New" and add the following two entries:
+%JAVA_HOME%\bin
+%JAVA_HOME%\jre\bin
+This allows your system to find the Java executables.
+Click "OK" to close each of the windows.
+
+##### Verify Setup
+Open a new command prompt (cmd) or PowerShell window.
+Type the following commands to check if Java is installed and configured correctly:
+
+java -version
 
 ### JVM, JRE, JDK
-
 
 
