@@ -137,4 +137,6 @@ source ~/.zshrc
 
 ### JVM, JRE, JDK
 
+![Screenshot 2024-01-26 at 7 13 29 PM](https://github.com/naditraining/Selenium-Tutotial/assets/157560787/b44d7870-6c1a-40e3-9b6d-97ae1bcbaa8e)
 
+reference: https://medium.com/@shashane.ranasinghe/jdk-vs-jvm-vs-jre-92916faead34
