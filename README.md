@@ -46,11 +46,13 @@
 
 ### JAVA installation
 
-Check if Java is Installed:
+Check if Java is Installed using below command
 
 java -version
 
-Install JDK 
+if not installed, 
+
+Install JDK using below steps
 
 https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
 
@@ -73,28 +75,31 @@ note - Replace /path/to/your/jdk with the actual path to your JDK installation d
 source ~/.zshrc
 
 #### Windows
-After installing the JDK, find the installation directory. By default, it is something like C:\Program Files\Java\jdk1.x.x
-Right-click on the Windows icon (Start menu) and select "System."
-Click on "Advanced system settings" on the left.
-In the System Properties window, click the "Environment Variables..." button.
-Under the "System variables" section, click "New."
-Set the variable name as JAVA_HOME.
-Set the variable value to the path of your JDK installation directory (e.g., C:\Program Files\Java\jdk1.x.x).
-Click "OK" to close each of the windows.
+1. After installing the JDK, find the installation directory. By default, it is something like C:\Program Files\Java\jdk1.x.x
+2. Right-click on the Windows icon (Start menu) and select "System."
+3. Click on "Advanced system settings" on the left.
+4. In the System Properties window, click the "Environment Variables..." button.
+5. Under the "System variables" section, click "New."
+6. Set the variable name as JAVA_HOME.
+7. Set the variable value to the path of your JDK installation directory (e.g., C:\Program Files\Java\jdk1.x.x).
+8. Click "OK" to close each of the windows.
+
 
 ##### Update Path Variable
-In the same "Environment Variables" window, find the "Path" variable under the "System variables" section and click "Edit."
-In the "Edit Environment Variable" window, click "New" and add the following two entries:
+1. In the same "Environment Variables" window, find the "Path" variable under the "System variables" section and click "Edit."
+2. In the "Edit Environment Variable" window, click "New" and add the following two entries:
 %JAVA_HOME%\bin
 %JAVA_HOME%\jre\bin
-This allows your system to find the Java executables.
-Click "OK" to close each of the windows.
+3. This allows your system to find the Java executables.
+4. Click "OK" to close each of the windows.
+
 
 ##### Verify Setup
-Open a new command prompt (cmd) or PowerShell window.
-Type the following commands to check if Java is installed and configured correctly:
+1. Open a new command prompt (cmd) or PowerShell window.
+2. Type the following commands to check if Java is installed and configured correctly:
 
 java -version
+
 
 ### JVM, JRE, JDK
 
