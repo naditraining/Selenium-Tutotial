@@ -104,6 +104,28 @@ reference: https://medium.com/@shashane.ranasinghe/jdk-vs-jvm-vs-jre-92916faead3
        
 ![Screenshot 2024-01-26 at 7 46 35 PM](https://github.com/naditraining/Selenium-Tutotial/assets/157560787/d3ea6726-394e-4766-a668-4ad425ed071e)
 
+### Syntax
+#### Variable declaration
+      <Data-Type> <Variable Name> or <Data-Type> <Variable Name> = value;
+
+      example:
+
+      int var=100;
+      int g;
+      char c,d; // declaring more than one variable in a statement
+
+#### Comments
+      // Single line comment
+
+      /* Multiline comment
+      in Java */ 
+#### Method syntax
+
+access-modifier return-type method-name()
+{
+      //code goes here      
+}
+
 ### Data types
     1. Primitive data type
     2. Reference data type
