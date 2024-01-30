@@ -21,6 +21,10 @@
 6. Write a program to calculate the sum of numbers from 1 to 5
 7. Write a program to print the first 10 even numbers using a do-while loop.
 
+8. Create a class (ClassA) with 2 static method and 2 non-static method
+   Create another class (say ClassB) and have one non-static method.
+   Now, try to call the 2 static and 2 non-static methods from non-static method of Class B.
+
 General note: 
 Create separate class for each question and do the implementation in the main method.
 
