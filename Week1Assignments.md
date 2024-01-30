@@ -11,17 +11,17 @@
 2. Write a program that checks whether a given number is even or odd.
    Note: there is operator named Modulo in JAVA - check about that in google.   
         
-4. Write a program that converts temperature from Celsius to Fahrenheit
+3. Write a program that converts temperature from Celsius to Fahrenheit
 
    Input is Celsius in numeric
    Note: Find Celsius to Fahrenheit in google
    Print the Fahrenheit value
   
-5. Write a program to print numbers from 1 to 10
-6. Write a program to calculate the sum of numbers from 1 to 5
-7. Write a program to print the first 10 even numbers using a do-while loop.
+4. Write a program to print numbers from 1 to 10
+5. Write a program to calculate the sum of numbers from 1 to 5
+6. Write a program to print the first 10 even numbers using a do-while loop.
 
-8. Create a class (ClassA) with 2 static method and 2 non-static method
+7. Create a class (ClassA) with 2 static method and 2 non-static method
    Create another class (say ClassB) and have one non-static method.
    Now, try to call the 2 static and 2 non-static methods from non-static method of Class B.
 
