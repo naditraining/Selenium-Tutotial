@@ -272,117 +272,117 @@ break, continue -  these two used to control the flow inside looping statements.
 ### Operators	
 #### Arithmetic operators
 
-- **`+` (Addition):**
-
-int result = 5 + 3; // result is 8
-System.out.println("result is "+result);
-
-- **`-` (Subtraction):**
-
-int result2 = 7 - 4; // result is 3
-System.out.println("result2 is "+result2);
-
-
-- **`*` (Multiplication):**
-
-int result3 = 6 * 2; // result is 12
-
-
-- **`/` (Division):**
-
-int result4 = 10 / 2; // result is 5
-
-
-- **`%` (Modulus - Remainder):**
-
-int result5 = 15 % 4; // result is 3
-
-
+      `+` (Addition):
+      
+      int result = 5 + 3; // result is 8
+      System.out.println("result is "+result);
+      
+      `-` (Subtraction):
+      
+      int result2 = 7 - 4; // result is 3
+      System.out.println("result2 is "+result2);
+      
+      
+      `*` (Multiplication):
+      
+      int result3 = 6 * 2; // result is 12
+      
+      
+      `/` (Division):
+      
+      int result4 = 10 / 2; // result is 5
+      
+      
+      `%` (Modulus - Remainder):
+      
+      int result5 = 15 % 4; // result is 3
+      
+      
 #### Logical operators	
-
-//        - **`==` (Equal to):**
-
-boolean isEqual = (5 == 5); // isEqual is true
-
-
-//        - **`!=` (Not equal to):**
-
-boolean isNotEqual = (7 != 5); // isNotEqual is true
-
-
-//        - **`>` (Greater than):**
-
-boolean isGreaterThan = (8 > 5); // isGreaterThan is true
-
-
-//        - **`<` (Less than):**
-
-boolean isLessThan = (3 < 6); // isLessThan is true
-
-
-//        - **`>=` (Greater than or equal to):**
-
-boolean isGreaterOrEqual = (10 >= 10); // isGreaterOrEqual is true
-
-
-//        - **`<=` (Less than or equal to):**
-
-boolean isLessOrEqual = (4 <= 5); // isLessOrEqual is true
-
+      
+      `==` (Equal to):
+      
+      boolean isEqual = (5 == 5); // isEqual is true
+      
+      
+      `!=` (Not equal to):
+      
+      boolean isNotEqual = (7 != 5); // isNotEqual is true
+      
+      
+      `>` (Greater than):
+      
+      boolean isGreaterThan = (8 > 5); // isGreaterThan is true
+      
+      
+      `<` (Less than):
+      
+      boolean isLessThan = (3 < 6); // isLessThan is true
+      
+      
+      `>=` (Greater than or equal to):
+      
+      boolean isGreaterOrEqual = (10 >= 10); // isGreaterOrEqual is true
+      
+      
+      `<=` (Less than or equal to):
+      
+      boolean isLessOrEqual = (4 <= 5); // isLessOrEqual is true
+      
 #### Logical operators
-
-//        - **`&&` (Logical AND):**
-
-boolean result7 = (true && false); // result is false
-
-
-//        - **`||` (Logical OR):**
-
-boolean result8 = (true || false); // result is true
-
-
-//        - **`!` (Logical NOT):**
-
-boolean result9 = !true; // result is false
-
+      
+      `&&` (Logical AND):
+      
+      boolean result7 = (true && false); // result is false
+      
+      
+      `||` (Logical OR):
+      
+      boolean result8 = (true || false); // result is true
+      
+      
+      `!` (Logical NOT):
+      
+      boolean result9 = !true; // result is false
+      
 #### Assignment Operators:
-
-//        - **`= ` (Assignment):**
-
-int x = 5; // Assigns the value 5 to variable x
-
-
-//        - **`+=` (Add and assign):**
-
-int y = 3;
-y += 2; // Equivalent to x = x + 2; // x is now 5
-
-
-//        - **`-=` (Subtract and assign):**
-
-int z = 7;
-z -= 3; // Equivalent to x = x - 3; // x is now 4
-
+      
+      `= ` (Assignment):
+      
+      int x = 5; // Assigns the value 5 to variable x
+      
+      
+       `+=` (Add and assign):
+      
+      int y = 3;
+      y += 2; // Equivalent to x = x + 2; // x is now 5
+      
+      
+       `-=` (Subtract and assign):
+      
+      int z = 7;
+      z -= 3; // Equivalent to x = x - 3; // x is now 4
+      
 #### Increment and Decrement Operators:
-
-//        - **`++` (Increment):**
-
-int count = 5;
-count++; // Equivalent to count = count + 1; // count is now 6
-
-
-//        - **`--` (Decrement):**
-
-int count1 = 8;
-count1--; // Equivalent to count = count - 1; // count is now 7
-
+      
+      `++` (Increment):
+      
+      int count = 5;
+      count++; // Equivalent to count = count + 1; // count is now 6
+      
+      
+      `--` (Decrement):
+      
+      int count1 = 8;
+      count1--; // Equivalent to count = count - 1; // count is now 7
+      
 #### Conditional (Ternary) Operator:
-
-//        - **`? :` (Conditional):**
-
-int number = 12;
-String result12 = (number % 2 == 0) ? "Even" : "Odd";
-// result is "Even" since 12 is divisible by 2
+      
+      `? :` (Conditional):
+      
+      int number = 12;
+      String result12 = (number % 2 == 0) ? "Even" : "Odd";
+      // result is "Even" since 12 is divisible by 2
               
 ### Object	
       - Object Creation, Reference, Reference Variables	
