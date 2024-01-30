@@ -33,41 +33,41 @@ https://www.oracle.com/au/java/technologies/downloads/archive/
 
 ### JAVA installation
 
-Check if Java is Installed using below command
+      Check if Java is Installed using below command
+      
+      java -version
+      
+      if java version is not returned, you can install java using below steps
+      
+      visit here to download - https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
+      
+      Things to consider before downloading
+      1. OS (windows, linux)
+      2. Processor architecture (x64, ARM)
 
-java -version
 
-if java version is not returned, you can install java using below steps
-
-visit here to download - https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
-
-Things to consider before downloading
-1. OS (windows, linux)
-2. Processor architecture (x64, ARM)
-
-Follow steps 
 ### Set JAVA_HOME Environment Variable
 The steps vary for windows and Mac OS 
 #### MAC OS 
-1. Open Terminal.
-2. Edit the shell profile file (e.g., ~/.bash_profile, ~/.zshrc, or ~/.bashrc) using a text editor like nano or vi. For example:
-nano ~/.zshrc
-3. Add the following line at the end to set the JAVA_HOME environment variable:
-export JAVA_HOME=/path/to/your/jdk
-note - Replace /path/to/your/jdk with the actual path to your JDK installation directory.
-4. Save the file and exit the text editor.
-5. Run the following command to apply the changes:
-source ~/.zshrc
+      1. Open Terminal.
+      2. Edit the shell profile file (e.g., ~/.bash_profile, ~/.zshrc, or ~/.bashrc) using a text editor like nano or vi. For example:
+      nano ~/.zshrc
+      3. Add the following line at the end to set the JAVA_HOME environment variable:
+      export JAVA_HOME=/path/to/your/jdk
+      note - Replace /path/to/your/jdk with the actual path to your JDK installation directory.
+      4. Save the file and exit the text editor.
+      5. Run the following command to apply the changes:
+      source ~/.zshrc
 
 #### Windows
-1. After installing the JDK, find the installation directory. By default, it is something like C:\Program Files\Java\jdk1.x.x
-2. Right-click on the Windows icon (Start menu) and select "System."
-3. Click on "Advanced system settings" on the left.
-4. In the System Properties window, click the "Environment Variables..." button.
-5. Under the "System variables" section, click "New."
-6. Set the variable name as JAVA_HOME.
-7. Set the variable value to the path of your JDK installation directory (e.g., C:\Program Files\Java\jdk1.x.x).
-8. Click "OK" to close each of the windows.
+      1. After installing the JDK, find the installation directory. By default, it is something like C:\Program Files\Java\jdk1.x.x
+      2. Right-click on the Windows icon (Start menu) and select "System."
+      3. Click on "Advanced system settings" on the left.
+      4. In the System Properties window, click the "Environment Variables..." button.
+      5. Under the "System variables" section, click "New."
+      6. Set the variable name as JAVA_HOME.
+      7. Set the variable value to the path of your JDK installation directory (e.g., C:\Program Files\Java\jdk1.x.x).
+      8. Click "OK" to close each of the windows.
 
 
   ##### Update Path Variable
@@ -88,9 +88,9 @@ source ~/.zshrc
 
 ### JVM, JRE, JDK
 
-![Screenshot 2024-01-26 at 7 13 29 PM](https://github.com/naditraining/Selenium-Tutotial/assets/157560787/b44d7870-6c1a-40e3-9b6d-97ae1bcbaa8e)
-
-reference: https://medium.com/@shashane.ranasinghe/jdk-vs-jvm-vs-jre-92916faead34
+      ![Screenshot 2024-01-26 at 7 13 29 PM](https://github.com/naditraining/Selenium-Tutotial/assets/157560787/b44d7870-6c1a-40e3-9b6d-97ae1bcbaa8e)
+      
+      reference: https://medium.com/@shashane.ranasinghe/jdk-vs-jvm-vs-jre-92916faead34
 
 ### Java project structure
 
@@ -118,15 +118,15 @@ reference: https://medium.com/@shashane.ranasinghe/jdk-vs-jvm-vs-jre-92916faead3
 
 ### Structure of JAVA program
 
-1. Documentation Section
-2. Package Statement
-3. Import Statements
-4. Interface Statement
-5. Class Definition
-6. Main Method Class
-    1. Main Method Definition
-       
-![Screenshot 2024-01-26 at 7 46 35 PM](https://github.com/naditraining/Selenium-Tutotial/assets/157560787/d3ea6726-394e-4766-a668-4ad425ed071e)
+      1. Documentation Section
+      2. Package Statement
+      3. Import Statements
+      4. Interface Statement
+      5. Class Definition
+      6. Main Method Class
+          1. Main Method Definition
+             
+      ![Screenshot 2024-01-26 at 7 46 35 PM](https://github.com/naditraining/Selenium-Tutotial/assets/157560787/d3ea6726-394e-4766-a668-4ad425ed071e)
 
 ### Syntax
 #### Variable declaration
@@ -161,114 +161,114 @@ Note: return type will be void when method is not returning anything.
 ### Data types
 #### Primitive data type
 
-Primitive data types are the most basic data types provided by the language. They represent simple values, and they are not objects
-
-1. **byte:**
-- Size: 8 bits
-- Range: -128 to 127
-
-byte myByte = 42;
-
-
-2. **short:**
-- Size: 16 bits
-- Range: -32,768 to 32,767
-
-short myShort = 1000;
-
-
-3. **int:**
-- Size: 32 bits
-    - Range: -2^31 to 2^31-1
-
-int myInt = 123456;
-
-
-4. **long:**
-- Size: 64 bits
-    - Range: -2^63 to 2^63-1
-
-long myLong = 9876543210L; // Note the 'L' at the end to indicate it's a long literal
-
-
-5. **float:**
-- Size: 32 bits
-    - Example:
-
-float myFloat = 3.14f; // Note the 'f' at the end to indicate it's a float literal
-
-6. **double:**
-- Size: 64 bits
-    - Example:
-
-double myDouble = 3.141592653589793;
-
-
-7. **char:**
-- Size: 16 bits
-    - Represents a single character using single quotes
-
-char myChar = 'A';
-
-
-8. **boolean:**
-- Represents true or false values
-
-boolean myBoolean = true;
+      Primitive data types are the most basic data types provided by the language. They represent simple values, and they are not objects
+      
+      1. **byte:**
+      - Size: 8 bits
+      - Range: -128 to 127
+      
+      byte myByte = 42;
+      
+      
+      2. **short:**
+      - Size: 16 bits
+      - Range: -32,768 to 32,767
+      
+      short myShort = 1000;
+      
+      
+      3. **int:**
+      - Size: 32 bits
+          - Range: -2^31 to 2^31-1
+      
+      int myInt = 123456;
+      
+      
+      4. **long:**
+      - Size: 64 bits
+          - Range: -2^63 to 2^63-1
+      
+      long myLong = 9876543210L; // Note the 'L' at the end to indicate it's a long literal
+      
+      
+      5. **float:**
+      - Size: 32 bits
+          - Example:
+      
+      float myFloat = 3.14f; // Note the 'f' at the end to indicate it's a float literal
+      
+      6. **double:**
+      - Size: 64 bits
+          - Example:
+      
+      double myDouble = 3.141592653589793;
+      
+      
+      7. **char:**
+      - Size: 16 bits
+          - Represents a single character using single quotes
+      
+      char myChar = 'A';
+      
+      
+      8. **boolean:**
+      - Represents true or false values
+      
+      boolean myBoolean = true;
          
 #### Reference data type
 
-SUGGESTION - Please refer reference datatype after learning about - obects in java and how to create.
-
-In Java, non-primitive data types, also known as reference types, are types that are derived from the primitive types. Unlike primitive types, these types are not simple values, but they are objects or instances of classes. Non-primitive data types include:
-
-1. **Strings:** Strings are sequences of characters and are represented by the `String` class in Java.
-
-   ```java
-   String myString = "Hello, World!";
-   ```
-
-These non-primitive data types are more complex than primitive types and are used to model and work with more intricate data structures and behaviors in Java programs. They are created based on classes and interfaces, providing a higher level of abstraction and functionality compared to the simple values represented by primitive types.
-
-2. **Classes:** Objects created from classes fall under non-primitive data types. A class is a blueprint for creating objects with fields (variables) and methods (functions).
-
-   ```java
-   class MyClass {
-       // class members (fields and methods)
-   }
-
-   MyClass myObject = new MyClass();
-   ```
-
-3. **Arrays:** Arrays are objects that can store multiple values of the same type in a contiguous memory location.
-
-   ```java
-   int[] myArray = {1, 2, 3, 4, 5};
-   ```
-
-4. **Interfaces:** Interfaces define a contract for classes to implement. Objects can be created from classes that implement these interfaces.
-
-   ```java
-   interface MyInterface {
-       // interface members
-   }
-
-   class MyImplementation implements MyInterface {
-       // class members implementing the interface
-   }
-
-   MyInterface myObject = new MyImplementation();
-   ```
-
-5. **Enumerations (Enums):** Enums are a special type of class used to represent a fixed set of constants.
-
-   ```java
-   enum Days {
-       MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
-   }
-
-   Days today = Days.MONDAY;
-   ```
+      SUGGESTION - Please refer reference datatype after learning about - obects in java and how to create.
+      
+      In Java, non-primitive data types, also known as reference types, are types that are derived from the primitive types. Unlike primitive types, these types are not simple values, but they are objects or instances of classes. Non-primitive data types include:
+      
+      1. **Strings:** Strings are sequences of characters and are represented by the `String` class in Java.
+      
+         ```java
+         String myString = "Hello, World!";
+         ```
+      
+      These non-primitive data types are more complex than primitive types and are used to model and work with more intricate data structures and behaviors in Java programs. They are created based on classes and interfaces, providing a higher level of abstraction and functionality compared to the simple values represented by primitive types.
+      
+      2. **Classes:** Objects created from classes fall under non-primitive data types. A class is a blueprint for creating objects with fields (variables) and methods (functions).
+      
+         ```java
+         class MyClass {
+             // class members (fields and methods)
+         }
+      
+         MyClass myObject = new MyClass();
+         ```
+      
+      3. **Arrays:** Arrays are objects that can store multiple values of the same type in a contiguous memory location.
+      
+         ```java
+         int[] myArray = {1, 2, 3, 4, 5};
+         ```
+      
+      4. **Interfaces:** Interfaces define a contract for classes to implement. Objects can be created from classes that implement these interfaces.
+      
+         ```java
+         interface MyInterface {
+             // interface members
+         }
+      
+         class MyImplementation implements MyInterface {
+             // class members implementing the interface
+         }
+      
+         MyInterface myObject = new MyImplementation();
+         ```
+      
+      5. **Enumerations (Enums):** Enums are a special type of class used to represent a fixed set of constants.
+      
+         ```java
+         enum Days {
+             MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+         }
+      
+         Days today = Days.MONDAY;
+         ```
 
 ### Keywords 
 
