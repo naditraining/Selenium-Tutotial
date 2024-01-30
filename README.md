@@ -92,6 +92,30 @@ source ~/.zshrc
 
 reference: https://medium.com/@shashane.ranasinghe/jdk-vs-jvm-vs-jre-92916faead34
 
+### Java project structure
+
+      MyJavaProject
+      |-- src (default package)
+      |   `-- com
+      |       `-- mycompany
+      |           `-- mypackage
+      |               `-- Main.java (class name)
+      |-- target 
+      |-- README.md (optional)
+      |-- .gitignore (optional)
+      |-- build.xml (for Ant build tool, optional)
+      |-- pom.xml (for Maven build tool, optional)
+
+### java naming conventions
+      Project names should be in uppercase letters.
+      Package names should be in lowercase letters.
+      Class and interface names should be in camel case, starting with an uppercase letter.
+      Variable names should be in camel case, starting with a lowercase letter.
+      Constant variables should be in uppercase letters with underscores separating words.
+            final int MAX_SIZE = 100;
+      Method names should be in camel case, starting with a lowercase letter.
+
+
 ### Structure of JAVA program
 
 1. Documentation Section
@@ -127,23 +151,239 @@ access-modifier return-type method-name()
 }
 
 ### Data types
-    1. Primitive data type
-    2. Reference data type
+#### Primitive data type
 
-### Keywords, Identifiers, Expressions	
+Primitive data types are the most basic data types provided by the language. They represent simple values, and they are not objects
+
+1. **byte:**
+- Size: 8 bits
+- Range: -128 to 127
+
+byte myByte = 42;
+
+
+2. **short:**
+- Size: 16 bits
+- Range: -32,768 to 32,767
+
+short myShort = 1000;
+
+
+3. **int:**
+- Size: 32 bits
+    - Range: -2^31 to 2^31-1
+
+int myInt = 123456;
+
+
+4. **long:**
+- Size: 64 bits
+    - Range: -2^63 to 2^63-1
+
+long myLong = 9876543210L; // Note the 'L' at the end to indicate it's a long literal
+
+
+5. **float:**
+- Size: 32 bits
+    - Example:
+
+float myFloat = 3.14f; // Note the 'f' at the end to indicate it's a float literal
+
+6. **double:**
+- Size: 64 bits
+    - Example:
+
+double myDouble = 3.141592653589793;
+
+
+7. **char:**
+- Size: 16 bits
+    - Represents a single character using single quotes
+
+char myChar = 'A';
+
+
+8. **boolean:**
+- Represents true or false values
+
+boolean myBoolean = true;
+         
+#### Reference data type
+
+SUGGESTION - Please refer reference datatype after learning about - obects in java and how to create.
+
+In Java, non-primitive data types, also known as reference types, are types that are derived from the primitive types. Unlike primitive types, these types are not simple values, but they are objects or instances of classes. Non-primitive data types include:
+
+1. **Strings:** Strings are sequences of characters and are represented by the `String` class in Java.
+
+   ```java
+   String myString = "Hello, World!";
+   ```
+
+These non-primitive data types are more complex than primitive types and are used to model and work with more intricate data structures and behaviors in Java programs. They are created based on classes and interfaces, providing a higher level of abstraction and functionality compared to the simple values represented by primitive types.
+
+2. **Classes:** Objects created from classes fall under non-primitive data types. A class is a blueprint for creating objects with fields (variables) and methods (functions).
+
+   ```java
+   class MyClass {
+       // class members (fields and methods)
+   }
+
+   MyClass myObject = new MyClass();
+   ```
+
+3. **Arrays:** Arrays are objects that can store multiple values of the same type in a contiguous memory location.
+
+   ```java
+   int[] myArray = {1, 2, 3, 4, 5};
+   ```
+
+4. **Interfaces:** Interfaces define a contract for classes to implement. Objects can be created from classes that implement these interfaces.
+
+   ```java
+   interface MyInterface {
+       // interface members
+   }
+
+   class MyImplementation implements MyInterface {
+       // class members implementing the interface
+   }
+
+   MyInterface myObject = new MyImplementation();
+   ```
+
+5. **Enumerations (Enums):** Enums are a special type of class used to represent a fixed set of constants.
+
+   ```java
+   enum Days {
+       MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   }
+
+   Days today = Days.MONDAY;
+   ```
+
+### Keywords 
+
+important keywords to know:
+
+break, continue -  these two used to control the flow inside looping statements.
+
           
 ### Operators	
-        - Arithmetic operators	
-        - Logical operators	
-        - Bitwise operators	
-        - Assignment operators	
-        - Relational operators	
-          
-### Variables	
-        - Declaration, Definition, Types		
-      
-### Syntax, Types	
-    
+#### Arithmetic operators
+
+- **`+` (Addition):**
+
+int result = 5 + 3; // result is 8
+System.out.println("result is "+result);
+
+- **`-` (Subtraction):**
+
+int result2 = 7 - 4; // result is 3
+System.out.println("result2 is "+result2);
+
+
+- **`*` (Multiplication):**
+
+int result3 = 6 * 2; // result is 12
+
+
+- **`/` (Division):**
+
+int result4 = 10 / 2; // result is 5
+
+
+- **`%` (Modulus - Remainder):**
+
+int result5 = 15 % 4; // result is 3
+
+
+#### Logical operators	
+
+//        - **`==` (Equal to):**
+
+boolean isEqual = (5 == 5); // isEqual is true
+
+
+//        - **`!=` (Not equal to):**
+
+boolean isNotEqual = (7 != 5); // isNotEqual is true
+
+
+//        - **`>` (Greater than):**
+
+boolean isGreaterThan = (8 > 5); // isGreaterThan is true
+
+
+//        - **`<` (Less than):**
+
+boolean isLessThan = (3 < 6); // isLessThan is true
+
+
+//        - **`>=` (Greater than or equal to):**
+
+boolean isGreaterOrEqual = (10 >= 10); // isGreaterOrEqual is true
+
+
+//        - **`<=` (Less than or equal to):**
+
+boolean isLessOrEqual = (4 <= 5); // isLessOrEqual is true
+
+#### Logical operators
+
+//        - **`&&` (Logical AND):**
+
+boolean result7 = (true && false); // result is false
+
+
+//        - **`||` (Logical OR):**
+
+boolean result8 = (true || false); // result is true
+
+
+//        - **`!` (Logical NOT):**
+
+boolean result9 = !true; // result is false
+
+#### Assignment Operators:
+
+//        - **`= ` (Assignment):**
+
+int x = 5; // Assigns the value 5 to variable x
+
+
+//        - **`+=` (Add and assign):**
+
+int y = 3;
+y += 2; // Equivalent to x = x + 2; // x is now 5
+
+
+//        - **`-=` (Subtract and assign):**
+
+int z = 7;
+z -= 3; // Equivalent to x = x - 3; // x is now 4
+
+#### Increment and Decrement Operators:
+
+//        - **`++` (Increment):**
+
+int count = 5;
+count++; // Equivalent to count = count + 1; // count is now 6
+
+
+//        - **`--` (Decrement):**
+
+int count1 = 8;
+count1--; // Equivalent to count = count - 1; // count is now 7
+
+#### Conditional (Ternary) Operator:
+
+//        - **`? :` (Conditional):**
+
+int number = 12;
+String result12 = (number % 2 == 0) ? "Even" : "Odd";
+// result is "Even" since 12 is divisible by 2
+              
 ### Object	
       - Object Creation, Reference, Reference Variables	
       
