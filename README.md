@@ -145,10 +145,18 @@ reference: https://medium.com/@shashane.ranasinghe/jdk-vs-jvm-vs-jre-92916faead3
       in Java */ 
 #### Method syntax
 
-access-modifier return-type method-name()
-{
-      //code goes here      
-}
+      access-modifier return-type method-name(arguments)
+      {
+            //code goes here   
+            return returnData; //optional when the return-type is void.
+      }
+      
+      public static int addNumbers(int num1, int num2) {
+              int sum = num1 + num2;
+              return sum;
+      }
+
+Note: return type will be void when method is not returning anything.
 
 ### Data types
 #### Primitive data type
@@ -385,10 +393,79 @@ break, continue -  these two used to control the flow inside looping statements.
       // result is "Even" since 12 is divisible by 2
               
 ### Object	
+      
       - Object Creation, Reference, Reference Variables	
       
+      Object is a instance of class. Object hold data (variables) and behavior (methods) related to that entity.
+      so only, objects are created to access the variables and methods of a particular class.
+      
+      'new' keyword is used to create object like below
+
+      Car cr = new Car();
+      Where Car - Class & cr - object name
+
+      the object 'cr' in this example will hold the reference to all the variables and methods in the 'Car' class.
+      
 ### Constructors	
-### Pass by value and Pass by reference	
+      In Java, a constructor is a special method that is called when an object is created. It has the same name as the class and does not         have a return type, not even void. The primary purpose of a constructor is to initialize the instance variables of an object or             perform any other setup that is needed when an object is created.
+
+      public class Car {
+      
+          // Instance variables
+          String brand;
+          String model;
+          int year;
+      
+          // Constructor
+          public Car(String brand, String model, int year) {
+              this.brand = brand;
+              this.model = model;
+              this.year = year;
+          }
+      
+          // Method to display car information
+          public void displayInfo() {
+              System.out.println("Brand: " + brand);
+              System.out.println("Model: " + model);
+              System.out.println("Year: " + year);
+          }
+      
+          public static void main(String[] args) {
+              // Creating an object of the Car class and invoking the constructor
+              Car myCar = new Car("Toyota", "Camry", 2022);
+      
+              // Invoking a method to display car information
+              myCar.displayInfo();
+          }
+      }
+
 ### Access Specifiers	
+
+      Here is a table that summarizes the Java access specifiers along with their accessibility and usage:
+      
+      | Access Specifier | Class | Package | Subclass | World |
+      | ---------------- | ----- | ------- | -------- | ----- |
+      | `public`         | Yes   | Yes     | Yes      | Yes   |
+      | `protected`      | Yes   | Yes     | Yes      | No    |
+      | `default`        | Yes   | Yes     | No       | No    |
+      | `private`        | Yes   | No      | No       | No    |
+      
+      - **`public`**:
+        - Accessible from anywhere. There are no restrictions on its access.
+        - Example: `public class MyClass { }`
+      
+      - **`protected`**:
+        - Accessible within the same class, same package, and subclasses. Outside the package, it is not accessible.
+        - Example: `protected int myVariable;`
+      
+      - **`default`** (no modifier):
+        - Accessible within the same class and same package. Outside the package, it is not accessible.
+        - Example: `int myVariable;`
+      
+      - **`private`**:
+        - Accessible only within the same class. Not accessible from subclasses or other packages.
+        - Example: `private String myField;`
+
+      Please note that these access specifiers apply to classes, methods, and fields in Java. They control the visibility and accessibility       of these elements within your codebase.
       
 ### Debugging in Eclipse IDE	    
