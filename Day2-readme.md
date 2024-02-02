@@ -393,3 +393,164 @@ public class SeleniumExampleWithParameters {
     
        In this way, Java provides a form of multiple inheritance, but it is achieved through interfaces rather than classes, mitigating the 
        issues associated with the diamond problem.
+
+### Polymorphism
+
+#### method overloading 
+
+    Method overloading in Java allows a class to have multiple methods with the same name but with different parameter lists. The key point     is that the methods must have a different number or type of parameters. This provides flexibility and readability in the code by            allowing you to use the same method name for operations that conceptually do the same thing but may vary based on the input
+
+    import org.openqa.selenium.WebDriver;
+    import org.openqa.selenium.chrome.ChromeDriver;
+    import org.openqa.selenium.firefox.FirefoxDriver;
+    import org.openqa.selenium.edge.EdgeDriver;
+    
+    public class BrowserLauncher {
+    
+        // Method to launch Chrome browser
+        public static WebDriver launchChromeBrowser() {
+            System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+            return new ChromeDriver();
+        }
+    
+        // Method to launch Firefox browser
+        public static WebDriver launchFirefoxBrowser() {
+            System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");
+            return new FirefoxDriver();
+        }
+    
+        // Method to launch Edge browser
+        public static WebDriver launchEdgeBrowser() {
+            System.setProperty("webdriver.edge.driver", "path/to/msedgedriver");
+            return new EdgeDriver();
+        }
+    
+        // Overloaded method to launch Chrome browser with custom options
+        public static WebDriver launchChromeBrowser(String chromeOptions) {
+            System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+            // Additional code to configure Chrome options based on the input
+            // For simplicity, we'll just print the options in this example
+            System.out.println("Chrome Options: " + chromeOptions);
+            return new ChromeDriver();
+        }
+    
+        public static void main(String[] args) {
+            // Example usage of the overloaded methods
+            WebDriver chromeDriver = launchChromeBrowser();
+            WebDriver firefoxDriver = launchFirefoxBrowser();
+            WebDriver edgeDriver = launchEdgeBrowser();
+            WebDriver customChromeDriver = launchChromeBrowser("--headless");
+    
+            // Perform actions with the launched browsers (not shown in this example)
+            
+            // Close the browsers when done
+            chromeDriver.quit();
+            firefoxDriver.quit();
+            edgeDriver.quit();
+            customChromeDriver.quit();
+        }
+    }
+
+    These methods are overloaded because they have the same method name (launchChromeBrowser) but different parameter lists (in terms of the number and types of parameters).
+
+#### Method overriding
+
+    Method overriding in Java is a feature that allows a subclass to provide a specific implementation of a method that is already defined in its superclass. The overriding method should have the same method signature (name, return type, and parameters) as the method in the superclass. Method overriding is a form of runtime polymorphism, where the actual method that gets executed is determined at runtime based on the object's type.
+
+        import org.openqa.selenium.WebDriver;
+    import org.openqa.selenium.chrome.ChromeDriver;
+    import org.openqa.selenium.firefox.FirefoxDriver;
+    
+    class BrowserLauncher {
+        // Method to launch a generic browser
+        void launchBrowser() {
+            System.out.println("Launching a generic browser");
+        }
+    }
+    
+    class ChromeBrowserLauncher extends BrowserLauncher {
+        // Override the launchBrowser method for Chrome
+        @Override
+        void launchBrowser() {
+            System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+            WebDriver driver = new ChromeDriver();
+            System.out.println("Launching Chrome browser");
+            // Additional configuration or actions specific to Chrome
+        }
+    }
+    
+    class FirefoxBrowserLauncher extends BrowserLauncher {
+        // Override the launchBrowser method for Firefox
+        @Override
+        void launchBrowser() {
+            System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");
+            WebDriver driver = new FirefoxDriver();
+            System.out.println("Launching Firefox browser");
+            // Additional configuration or actions specific to Firefox
+        }
+    }
+    
+    public class BrowserLauncherTest {
+        public static void main(String[] args) {
+            BrowserLauncher chromeLauncher = new ChromeBrowserLauncher();
+            BrowserLauncher firefoxLauncher = new FirefoxBrowserLauncher();
+    
+            chromeLauncher.launchBrowser();  // Calls the overridden method in ChromeBrowserLauncher
+            firefoxLauncher.launchBrowser(); // Calls the overridden method in FirefoxBrowserLauncher
+        }
+    }
+
+
+Explanation:
+
+BrowserLauncher is the base class with a method launchBrowser. This method prints a generic message indicating the launch of a generic browser.
+
+ChromeBrowserLauncher and FirefoxBrowserLauncher are subclasses of BrowserLauncher. They override the launchBrowser method to provide browser-specific implementations for Chrome and Firefox, respectively.
+
+### Arrays in Java
+
+  In Java, an array is a data structure that allows you to store multiple values of the same type under a single variable name. It provides a way to access elements using an index or position within the array. The index starts from 0, so the first element is at index 0, the second element at index 1, and so on.
+
+  #### Declaration and Initialization:
+
+    // Declaration and initialization of an array of integers
+    int[] numbers = {1, 2, 3, 4, 5};
+    
+    // Declaration and initialization of an array of strings
+    String[] names = {"Alice", "Bob", "Charlie", "David"};
+
+  #### Accessing Array Elements:
+
+    int firstNumber = numbers[0];  // Access the first element (index 0)
+    String secondName = names[1];  // Access the second element (index 1)
+
+  #### Array length
+
+    int lengthOfNumbers = numbers.length;  // Returns the length of the numbers array
+
+  #### Example
+
+      public class ArrayExample {
+        public static void main(String[] args) {
+            // Declaration and initialization of an array of integers
+            int[] numbers = {10, 20, 30, 40, 50};
+    
+            // Accessing and printing array elements
+            System.out.println("First number: " + numbers[0]);
+            System.out.println("Second number: " + numbers[1]);
+            System.out.println("Third number: " + numbers[2]);
+    
+            // Modifying an array element
+            numbers[1] = 25;
+            System.out.println("Updated second number: " + numbers[1]);
+    
+            // Iterating through the array using a for loop
+            System.out.println("Array elements:");
+            for (int i = 0; i < numbers.length; i++) {
+                System.out.println("Element at index " + i + ": " + numbers[i]);
+            }
+        }
+    }
+
+
+
