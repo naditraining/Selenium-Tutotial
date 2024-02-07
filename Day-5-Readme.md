@@ -8,6 +8,11 @@
   Selenium 3 (2016):
   Selenium 4 (2020):
 
+## Components of selenium 
+
+<img width="772" alt="image" src="https://github.com/naditraining/Selenium-Tutotial/assets/157560787/a969948c-0027-47cd-badf-6384f82d56dd">
+
+
 ## Supported Browsers:
   
   Chrome
@@ -18,11 +23,25 @@
 
 ## Selenium 3 architecture
 
-<img width="818" alt="image" src="https://github.com/naditraining/Selenium-Tutotial/assets/157560787/ff474ff3-1e5f-4660-b280-1860b8ac8f24">
+<img width="651" alt="image" src="https://github.com/naditraining/Selenium-Tutotial/assets/157560787/7bcd657d-2b96-4368-bdca-5127b306e581">
+
 
 ## Selenium 4 architecture
 
-<img width="784" alt="image" src="https://github.com/naditraining/Selenium-Tutotial/assets/157560787/3cabc3b0-d211-4f58-8251-dab18e9f0f2f">
+<img width="660" alt="image" src="https://github.com/naditraining/Selenium-Tutotial/assets/157560787/c0a33426-de08-4cb6-81c3-a1ba0e56428d">
+
+## Whats new in Selenium 4
+
+  1. Enhanced Selenium Grid
+  2. Upgraded Selenium IDE
+  3. Relative Locators in Selenium 4
+  4. Improved Documentation
+  5. Support for Chrome Debugging Protocol
+  6. Better Window/Tab Management in Selenium 4
+  7. Deprecation of Desired Capabilities
+  8. Modifications in the Actions Class
+
+  For more detailed informaiton, refer the source article: https://www.browserstack.com/guide/selenium-4-features
 
 ## No need to mention Driver path hereafter (starting selenium 4.6)
 
@@ -88,5 +107,13 @@
     
     These are just a few basic tags and attributes in HTML. HTML offers a wide range of tags and attributes to structure and style content, and it is essential to understand their usage for creating well-formed and semantically meaningful web documents.
 
-    
+## Basic automation principle
+
+  - Launch browser (create driver object) 
+  
+  - Locate the element (using the driver object and use find element methods (returns the webelment object)  
+  
+  - Do the action (use the web element object and call the necessary action methods) 
+  
+  - Eaplain the browser (window) and element level operations. 
 
