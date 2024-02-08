@@ -115,5 +115,35 @@
   
   - Do the action (use the web element object and call the necessary action methods) 
   
-  - Eaplain the browser (window) and element level operations. 
+  - Eaplain the browser (window) and element level operations.
 
+## How we locate the elements in page - Locators in selenium 
+
+    Locator  	      Description
+    
+    class name	        - Locates elements whose class name contains the search value (compound class names are not permitted)
+    css selector	      - Locates elements matching a CSS selector
+    id	                - Locates elements whose ID attribute matches the search value
+    name	              - Locates elements whose NAME attribute matches the search value
+    link text	          - Locates anchor elements whose visible text matches the search value
+    partial link text	  - Locates anchor elements whose visible text contains the search value. If multiple elements are matching, only the                           first one will be selected.
+    tag name	          - Locates elements whose tag name matches the search value
+    xpath	              - Locates elements matching an XPath expression
+
+
+    <img width="756" alt="image" src="https://github.com/naditraining/Selenium-Tutotial/assets/157560787/e387b606-9911-431c-8b3f-6f5fcb584268">
+### Xpath
+    
+    Syntax - Xpath =//tagname[@Attribute=’value’]
+
+### CSS selector 
+    
+    https://www.browserstack.com/guide/css-selectors-in-selenium 
+    
+## Relative locators from Selenium 4
+
+    Selenium 4 introduces Relative Locators (previously called Friendly Locators). These locators are helpful when it is not easy to       
+    construct a locator for the desired element, but easy to describe spatially where the element is in relation to an element that does 
+    have an easily constructed locator.
+
+    options are - above, below, toLeftOf, toRightOf.
