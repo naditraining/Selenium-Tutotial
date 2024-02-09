@@ -12,6 +12,7 @@
 
 <img width="772" alt="image" src="https://github.com/naditraining/Selenium-Tutotial/assets/157560787/a969948c-0027-47cd-badf-6384f82d56dd">
 
+Note: Selenium RC is deprecated from Selenium 2, as web driver is better than RC.
 
 ## Supported Browsers:
   
