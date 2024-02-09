@@ -140,6 +140,9 @@
     
     https://www.browserstack.com/guide/css-selectors-in-selenium 
     
+    practice CSS selector here
+    https://www.w3schools.com/cssref/trysel.php
+    
 ## Relative locators from Selenium 4
 
     Selenium 4 introduces Relative Locators (previously called Friendly Locators). These locators are helpful when it is not easy to       
