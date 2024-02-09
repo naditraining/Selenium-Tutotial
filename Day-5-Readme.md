@@ -118,6 +118,93 @@ Note: Selenium RC is deprecated from Selenium 2, as web driver is better than RC
   
   - Eaplain the browser (window) and element level operations.
 
+## Driver level functions
+
+  In Selenium, driver level functions refer to the methods and capabilities provided by the WebDriver interface to interact with and control the browser. The       WebDriver interface serves as the foundation for various browser-specific implementations like ChromeDriver, FirefoxDriver, etc. Here are some common driver-     level functions in Selenium:
+  
+  1. **Creating a WebDriver instance:**
+     - Instantiate a specific WebDriver class to launch and control a particular browser.
+     ```java
+     WebDriver driver = new ChromeDriver(); // For Chrome browser
+     ```
+  
+  2. **Navigating to a URL:**
+     - Use the `get()` method to navigate to a specific URL.
+     ```java
+     driver.get("https://example.com");
+     ```
+  
+  3. **Navigating forward and backward:**
+     - Use `navigate().forward()` and `navigate().back()` methods to navigate forward and backward in the browser history.
+     ```java
+     driver.navigate().forward();
+     driver.navigate().back();
+     ```
+  
+  4. **Refreshing the page:**
+     - Use `navigate().refresh()` to refresh the current page.
+     ```java
+     driver.navigate().refresh();
+     ```
+  
+  5. **Managing browser windows:**
+     - Functions like `getWindowHandle()`, `getWindowHandles()`, `switchTo().window()`, and `close()` help in managing browser windows and tabs.
+     ```java
+     String currentWindow = driver.getWindowHandle();
+     Set<String> allWindows = driver.getWindowHandles();
+     driver.switchTo().window(currentWindow);
+     driver.close();
+     ```
+  
+  6. **Finding elements:**
+     - Use various `findElement()` and `findElements()` methods to locate and interact with HTML elements on the page.
+     ```java
+     WebElement element = driver.findElement(By.id("exampleId"));
+     List<WebElement> elements = driver.findElements(By.tagName("a"));
+     ```
+  
+  7. **Interacting with elements:**
+     - WebDriver provides methods to interact with elements, such as `click()`, `sendKeys()`, `getText()`, `getAttribute()`, etc.
+     ```java
+     element.click();
+     element.sendKeys("input text");
+     String text = element.getText();
+     String attributeValue = element.getAttribute("attributeName");
+     ```
+  
+  8. **Handling alerts:**
+     - Methods like `switchTo().alert().accept()`, `switchTo().alert().dismiss()`, and `switchTo().alert().getText()` are used to handle JavaScript alerts.
+     ```java
+     driver.switchTo().alert().accept();
+     ```
+  
+  9. **Executing JavaScript:**
+     - Use `executeScript()` to execute JavaScript code in the context of the current page.
+     ```java
+     JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+     jsExecutor.executeScript("document.getElementById('elementId').style.border='2px solid red'");
+     ```
+  
+  10. **Managing timeouts:**
+      - Use `manage().timeouts()` to set implicit and page load timeouts.
+      ```java
+      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+      ```
+
+  10. **Managing window:**
+      - Use `manage().window()` to minimize and maximise the window.
+
+          WebDriver driver = new ChromeDriver();
+          driver.get("https://example.com");
+          
+          // Maximize the browser window
+          driver.manage().window().maximize();
+
+         // Minimize the browser window
+         driver.manage().window().minimize();
+
+  These are just a few examples of driver-level functions provided by Selenium. Depending on your testing requirements, you may need to use additional methods and capabilities provided by the WebDriver interface.
+
 ## How we locate the elements in page - Locators in selenium 
 
     Locator  	      Description
