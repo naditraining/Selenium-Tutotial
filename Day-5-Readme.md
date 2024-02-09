@@ -142,6 +142,12 @@
     
     practice CSS selector here
     https://www.w3schools.com/cssref/trysel.php
+
+### Xpath vs CSS
+
+    ![image](https://github.com/naditraining/Selenium-Tutotial/assets/157560787/ebb086ff-4807-4ca1-bbed-571551f2598a)
+
+    An axis represents a relationship to the context (current) node, and is used to locate nodes relative to that node on the tree.
     
 ## Relative locators from Selenium 4
 
@@ -150,3 +156,6 @@
     have an easily constructed locator.
 
     options are - above, below, toLeftOf, toRightOf.
+
+## references
+    https://testsigma.com/blog/xpath-vs-css-selector/#Advantages_of_CSS_Selectors_over_XPath
