@@ -14,4 +14,6 @@
 Note: you can choose to keep the driver object as static, so it can be directly accessed by any class like step definition or page class.
 
 ## Issue when the tests run parallel
-    
+## Cucumber hooks
+## Extent report adapter 
+## GitHub
